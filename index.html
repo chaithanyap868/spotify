@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    .parent {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      border: 1px solid black;
+      background-color: grey;
+    }
+
+    .left {
+      flex: 0.3;
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      margin-inline-start: 0px;
+    }
+
+    .right {
+      flex: 0.7;
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+    }
+
+    .child {
+      flex: 1;
+      background-color: rgb(241, 233, 233);
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      border-radius: 30px;
+    }
+
+    .child-heading {
+      background-color: #f0f0f0;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .child-content {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .playlist-heading, .focus-heading {
+      font-weight: bold;
+      padding: 10px;
+      text-align: left;
+      color: #000;
+      border-right: 1px solid #000;
+    }
+
+    span.b {
+      display: inline-block;
+      width: 140px;
+      height: 200px;
+      padding: 5px;
+      margin: 5px;
+      background-color:grey;
+      position: relative;
+      border-radius: 30px;
+    }
+
+    .image-container1 {
+      /* display: flex; */
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+      width: 150px;
+      margin-left: 13px;
+      margin-right: 150px;
+      margin-inline-end: 65px;
+    
+    }
+    
+    .image-container {
+      /* display: flex; */
+      align-items: center;
+      justify-content: center;
+      height: 130px;
+      width: 100px;
+      margin-left: 13px;
+      margin-right: auto;
+      border: 2px solid black;
+      border-radius: 10px;
+      
+    }
+
+    .image-75 {
+  max-width: 100%; /* Change this from max-width: 100% to max-width: 50% */
+  max-height: 100%;
+  border-radius: 10px;
+}
+a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Inherits the color from its parent element */
+}
+
+
+    .horizontal-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .text-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5px;
+      position: relative;
+    }
+
+    .text-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: yellow;
+      z-index: -1;
+    }
+    .text-style {
+
+  /* Add any other text styles you want to apply */
+  text-align: center;
+}
+
+body {
+  font-family: Perpetua;
+}
+.icon-small {
+  width: 20px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
+}
+
+.icon-list {
+  list-style: none;
+  padding: 0;
+}
+
+.icon-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-left: 20px; 
+}
+
+.scrollable-list {
+  max-height: 100px; 
+  overflow-y: scroll;
+}
+
+.vibrant-box {
+  background-color: #7d1700; /* Set the vibrant color you want */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="left">
+      <div class="child">
+        <ul class="icon-list">
+          <li>
+            <img src="spotifyimg.png" alt="Spotify Icon" class="icon icon-small">
+           |  Spotify
+          </li>
+          <li>
+            <img src="home.png" alt="Home Icon" class="icon icon-small">
+            | Home
+          </li>
+          <li>
+            <img src="search.png" alt="Search Icon" class="icon icon-small">
+            | Search
+          </li>
+        </ul>
+      </div>
+      <div class="child">
+        <ul class="icon-list">
+          <li>
+            <img src="library.png" alt="Library Icon" class="icon icon-small">
+           |  Library
+          </li>
+          <li class="scrollable-list">
+          
+            <p><b>Create your first playlist</b><br>
+              It's easy, we'll help you create a playlist.
+            </p>
+            <div class="vibrant-box">
+              <p>Create a Playlist</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+     
+      
+      <div class="child"><p style="margin-left: 5px;">Legal   Privacycenter  privacypolicy  cookies
+      ads</p></div>
+    </div>
+    
+    <div class="right">
+      <div class="child">
+        <div class="playlist-heading"><a href="#">Playlists</a></div>
+        <div class="child-content">
+          <div class="horizontal-container">
+            <span class="b">
+              <div class="image-container">
+                <img src="kinporche.jfif" alt="Image" class="image-75">
+              </div>
+              <div class="text-container">
+                <span class="text-style">Kinn Porche The Series</span>
+              </div>
+            </span>
+            <span class="b">
+              <div class="image-container">
+                <img src="anirudh.jpg" alt="Image" class="image-75">
+              </div>
+              <div class="text-container">
+                <span class="text-style">Romantic Anirudh</span>
+              </div>
+            </span>
+            <span class="b">
+              <div class="image-container">
+                <img src="lofi.jpg" alt="Image" class="image-75">
+              </div>
+              <div class="text-container">
+                <span class="text-style">Lofi Hits</span>
+              </div>
+            </span>
+            <span class="b">
+              <div class="image-container">
+                <img src="shersha.jpg" alt="Image" class="image-75">
+              </div>
+              <div class="text-container">
+                <span class="text-style">Bollywood Butter</span>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="child">
+        <div class="playlist-heading"><a href="#">Focus</a></div>
+        <div class="child-content">
+          <div class="horizontal-container">
+            <span class="b">
+              <div class="image-container">
+                <img src="Justin Bieber.jpg" alt="Image" class="image-75">
+              </div>
+              <div class="text-container">
+                <span class="text-style">Justin Bieber </span>
+              </div>
+            </span>
+            <span class="b">
+              <div class="image-container">
+                <img src="ariana.jpg" alt="Image" class="image-75">
+              </div>
+              <div class="text-container">
+                <span class="text-style">Ariana Grande</span>
+              </div>
+            </span>
+            <span class="b">
+              <div class="image-container">
+                <img src="arrahman.jpg" alt="Image" class="image-75">
+              </div>
+              <div class="text-container">
+                <span class="text-style">A R Rahman</span>
+              </div>
+            </span>
+            <span class="b">
+              <div class="image-container">
+                <img src="bts.jpg" alt="Image" class="image-75">
+              </div>
+              <div class="text-container">
+                <span class="text-style">BTS</span>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
